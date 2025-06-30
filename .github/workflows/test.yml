@@ -32,8 +32,12 @@ jobs:
 
       - name: Iniciar Flask en segundo plano
         run: |
-          nohup flask run --host=127.0.0.1 --port=5000 & sleep 5
+          nohup flask run --host=127.0.0.1 --port=5000 & sleep 12
 
       - name: Ejecutar pruebas funcionales con Selenium
         run: |
           pytest tests/test_func_usuario2.py
+
+      - name: Mostrar logs Flask (para debug)
+        if: failure()
+        run: cat flask.log
