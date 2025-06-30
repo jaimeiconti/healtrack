@@ -34,7 +34,7 @@ jobs:
 
       - name: Ejecutar pruebas unitarias
         run: |
-          pytest tests/test_usuario.py
+          pytest tests/test_usuario.py --junitxml=reports/unit_tests.xml
 
       - name: Verificar que Flask está corriendo
         run: |
@@ -42,8 +42,14 @@ jobs:
 
       - name: Ejecutar pruebas funcionales con Selenium
         run: |
-          pytest tests/test_func_usuario2.py
+          pytest tests/test_func_usuario2.py --junitxml=reports/functional_tests.xml
 
       - name: Mostrar logs Flask (para debug)
         if: failure()
         run: cat flask.log
+
+      - name: Publicar reportes de tests
+        uses: actions/upload-artifact@v3
+        with:
+          name: pytest-reports
+          path: reports/
