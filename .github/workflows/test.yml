@@ -26,13 +26,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Ejecutar pruebas unitarias
-        run: |
-          pytest tests/test_usuario.py
-
       - name: Iniciar Flask en segundo plano
         run: |
           nohup flask run --host=127.0.0.1 --port=5000 & sleep 12
+
+      - name: Ejecutar pruebas unitarias
+        run: |
+          pytest tests/test_usuario.py
 
       - name: Ejecutar pruebas funcionales con Selenium
         run: |
