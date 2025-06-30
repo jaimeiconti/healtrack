@@ -28,7 +28,7 @@ jobs:
 
       - name: Iniciar Flask en segundo plano
         run: |
-          export FLASK_APP=app:app
+          export FLASK_APP=app.app:app
           nohup flask run --host=127.0.0.1 --port=5000 > flask.log 2>&1 &
           sleep 30
 
