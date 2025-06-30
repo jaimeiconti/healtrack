@@ -28,7 +28,9 @@ jobs:
 
       - name: Iniciar Flask en segundo plano
         run: |
-          nohup flask run --host=127.0.0.1 --port=5000 & sleep 12
+          export FLASK_APP=app
+          nohup flask run --host=127.0.0.1 --port=5000 > flask.log 2>&1 &
+          sleep 15
 
       - name: Ejecutar pruebas unitarias
         run: |
