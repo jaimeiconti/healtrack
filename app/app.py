@@ -19,7 +19,6 @@ class Usuario:
     def mostrar_informacion(self) -> str:
         return f"Usuario: {self.nombre}, Peso Actual: {self.peso} kg"
 
-usuario = Usuario("", 0)
 
 @app.route("/", methods=["GET", "POST"])
 def formulario():
