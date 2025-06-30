@@ -30,7 +30,7 @@ jobs:
         run: |
           export FLASK_APP=app
           nohup flask run --host=127.0.0.1 --port=5000 > flask.log 2>&1 &
-          sleep 15
+          sleep 30
 
       - name: Ejecutar pruebas unitarias
         run: |
