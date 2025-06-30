@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Usuario</title>
+</head>
+<body>
+    <h1>Actualizar Peso</h1>
+    <form method="POST">
+        <label>Nombre:
+            <input type="text" name="nombre" id="nombre" required>
+        </label><br><br>
+        <label>Peso (kg):
+            <input type="number" step="any" name="peso" id="peso" required>
+        </label><br><br>
+        <button type="submit">Actualizar Peso</button>
+    </form>
+    {% if resultado %}
+    <p id="resultado"><strong>{{ resultado }}</strong></p>
+    {% endif %}
+</body>
+</html>

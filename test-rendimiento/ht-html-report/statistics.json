@@ -1,0 +1,34 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 250,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2.892000000000001,
+    "medianResTime" : 3.0,
+    "minResTime" : 1.0,
+    "maxResTime" : 25.0,
+    "pct1ResTime" : 4.0,
+    "pct2ResTime" : 5.0,
+    "pct3ResTime" : 5.980000000000018,
+    "throughput" : 25.722810988784854,
+    "receivedKBytesPerSec" : 19.216748443769937,
+    "sentKBytesPerSec" : 5.199826049490689
+  },
+  "HealthTrack App" : {
+    "transaction" : "HealthTrack App",
+    "sampleCount" : 250,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2.892000000000001,
+    "medianResTime" : 3.0,
+    "minResTime" : 1.0,
+    "maxResTime" : 25.0,
+    "pct1ResTime" : 4.0,
+    "pct2ResTime" : 5.0,
+    "pct3ResTime" : 5.980000000000018,
+    "throughput" : 25.722810988784854,
+    "receivedKBytesPerSec" : 19.216748443769937,
+    "sentKBytesPerSec" : 5.199826049490689
+  }
+}
